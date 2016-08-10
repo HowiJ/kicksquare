@@ -243,7 +243,7 @@ function moveBag () {
 //                       COLLISION                        //
 ////////////////////////////////////////////////////////////
 function collision() {
-    k.collision = false;
+    k.kicking = false;
     var actualX = Math.abs(bag.position.x - obj.position.x);
     var actualY = Math.abs(bag.position.y - obj.position.y);
 
@@ -267,6 +267,7 @@ function collision() {
     }
     if ( kickX <= collisionX ) {
         if ( kickY <= collisionY ) {
+            console.log(kickX, collisionX);
             k.kicking = true;
         }
     }
